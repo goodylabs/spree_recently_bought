@@ -1,0 +1,17 @@
+<h3><%= Spree.t(:recently_bought_items) %></h3>
+<% if @recently_bought_products.present? %>
+    <ul id="products" class="inline product-listing" data-hook>
+		<div class="row">
+			<% @recently_bought_products.take( Rails.application.config.respond_to?(:list_size_spree_recently_bought) ? Rails.application.config.list_size_spree_recently_bought  : 3).each do |product|%>
+		        <li id="product_<%= product.id %>" class="columns three <%= cycle("alpha", "secondary", "", "omega secondary", :name => "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
+		          <div class="product-image">
+		            <%= link_to small_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
+		          </div>
+		          <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
+		          <span class="price selling" itemprop="price"><%= display_price(product) %></span>
+		        </li>
+		      <% end %>
+		      <#% reset_cycle("classes") %>
+		</div>
+  </ul>
+<% end %>
