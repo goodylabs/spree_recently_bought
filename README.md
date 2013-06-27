@@ -19,12 +19,15 @@ bundle
 bundle exec rails g spree_recently_bought:install
 ```
 
-COnfiguration
+Configuration
+-------------
 
-''' application.rb
-    # for spree recently bought  extension
+Add below lines to application.rb
+
+```
+    # for spree recently bought  extension - number of products showed on customer account page
     config.list_size_spree_recently_bought = 4
-'''
+```
 
 
 Testing
