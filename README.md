@@ -19,6 +19,14 @@ bundle
 bundle exec rails g spree_recently_bought:install
 ```
 
+COnfiguration
+
+''' application.rb
+    # for spree recently bought  extension
+    config.list_size_spree_recently_bought = 4
+'''
+
+
 Testing
 -------
 
