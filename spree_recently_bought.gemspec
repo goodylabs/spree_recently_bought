@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.name        = 'spree_recently_bought'
   s.version     = '2.0.3'
   s.summary     = 'Adds recently_bought products row to customer accout page'
-  s.description = 'TODO: Add (optional) gem description here'
+  # s.description = 'TODO: Add (optional) gem description here'
   s.required_ruby_version = '>= 1.9.3'
 
   s.author    = 'wojciech.zywno'
